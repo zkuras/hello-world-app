@@ -31,6 +31,6 @@ variable "google_domain_name" {
   default = "kundaulet.com"
 }
 variable "deployment_image" {
-    default = "docker.saltadevops.com/hello-world-stage:97ad9d8"
+    default = "docker.kundaulet.com/hello-wrld-stage:3da359e"
     description = "- (Optional) The docker image of the deployment."
 }

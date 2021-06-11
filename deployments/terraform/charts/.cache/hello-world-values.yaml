@@ -4,7 +4,7 @@
 
 replicaCount: 10
 image: 
-  repository: ${deployment_image}
+  repository: docker.kundaulet.com/hello-wrld-stage:3da359e
   pullPolicy: IfNotPresent
 imagePullSecrets: []
 nameOverride: ""
@@ -19,13 +19,13 @@ ingress:
     cert-manager.io/cluster-issuer: letsencrypt-prod
     # kubernetes.io/tls-acme: "true"
   hosts:
-    - host: ${deployment_endpoint}
+    - host: dev.hello.kundaulet.com
       paths:
       - '/'
   tls:
   - secretName: chart-example-tls
     hosts:
-      - ${deployment_endpoint}
+      - dev.hello.kundaulet.com
 
 resources: {}
   # We usually recommend not to specify default resources and to leave this as a conscious
